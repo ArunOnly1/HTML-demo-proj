@@ -1,0 +1,46 @@
+.btn {
+  border: none;
+  border-radius: 0 !important;
+  padding: 0.5rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(154, 0, 219, 1) 0%,
+    rgba(45, 255, 254, 1) 100%
+  );
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background-image: linear-gradient(to left, #7b13de, #0bebfc);
+  }
+}
+
+.current {
+  color: #8622d9;
+}
+
+%arrow {
+  border: solid $secondary-color;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  @extend %arrow;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+%box-arrow {
+  border: 2px solid $border-color;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.fa-star {
+  color: $main-color;
+}

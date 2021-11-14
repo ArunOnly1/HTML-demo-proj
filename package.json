@@ -1,0 +1,14 @@
+{
+  "name": "Business_Basics",
+  "version": "1.0.0",
+  "description": "Given by Pradeep Bista dai",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "Arun Chapagain(Arun1nly1)",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

@@ -1,0 +1,154 @@
+@import 'config';
+h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+#navbar {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  height: fit-content;
+  ul {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    li {
+      margin: 0;
+      padding: 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+#main-content {
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .rating {
+    margin: 0;
+    padding: 0;
+    i {
+      color: $main-color;
+    }
+    .star {
+      display: flex;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    #rate-review {
+      font-size: 0.6rem;
+    }
+  }
+
+  .info-container {
+    margin-top: 0;
+    padding: 0;
+    .about {
+      p {
+        margin-top: 0;
+        margin-right: 0;
+        padding: 1rem;
+      }
+    }
+    .what-get,
+    .what-learnt,
+    .say {
+      padding: 1rem;
+    }
+    .opinion-1 {
+      width: 100%;
+      .text {
+        visibility: hidden;
+      }
+    }
+    .end-line {
+      font-size: 2rem;
+      margin: 3rem auto;
+    }
+  }
+}
+
+.subscribe-query {
+  margin: 0 auto;
+  .subscribe {
+    margin-bottom: 0;
+  }
+  .query {
+    margin-top: 0;
+  }
+}
+
+.faq {
+  margin-top: 0;
+  .container {
+    padding: 0;
+    margin: 0;
+
+    .expand {
+      flex-direction: column;
+      justify-content: center;
+      align-items: space-between;
+    }
+  }
+}
+
+.photos {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      background: $main-color;
+      position: absolute;
+      height: 1000px;
+      width: 100%;
+      opacity: 0.3;
+      z-index: 1;
+    }
+    img {
+      max-height: 200px;
+      width: 300px;
+    }
+  }
+}
+
+footer {
+  .footer-items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    li {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .copyright {
+    margin-top: 5rem;
+    p {
+      font-size: 0.8rem;
+      text-align: center;
+      &:first-child {
+        text-align: center;
+      }
+    }
+  }
+}

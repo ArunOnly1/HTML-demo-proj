@@ -1,0 +1,530 @@
+@import 'config';
+@import 'utilities';
+
+// General styles
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Sora', sans-serif;
+	line-height: 1.6;
+	background-color: #fff;
+	box-sizing: border-box;
+	// overflow-x: hidden;
+}
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+// Logo
+// .logo {
+//   height: 100%;
+
+// }
+
+h2 {
+	margin: 3rem auto 0.5rem auto;
+	font-size: 2rem;
+}
+#navbar {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-shrink: 0;
+	align-items: center;
+
+	margin: 0 8rem;
+	img {
+		height: 100px;
+		width: 100px;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+		justify-content: space-around;
+		align-items: center;
+		padding: 1rem;
+		margin-left: 3rem;
+		li {
+			padding: 0 1rem;
+			.wrapper {
+				height: 60px;
+				width: 50px;
+				position: relative;
+				object {
+					margin-top: 1rem;
+					&:hover {
+						transition: transform 0.5s ease;
+						transform: scale(1.3);
+					}
+				}
+				.cart-num {
+					height: 20px;
+					width: 40%;
+					background: $secondary-color;
+
+					position: absolute;
+					top: 0;
+					right: 3px;
+					border-radius: 50%;
+
+					p {
+						font-size: 0.8rem;
+						padding: 0.1rem;
+						font-weight: normal;
+					}
+				}
+			}
+
+			a {
+				color: $dark-color;
+				font-weight: bold;
+			}
+
+			& .current {
+				color: $main-color;
+			}
+			& .btn {
+				color: #fff;
+				font-weight: normal;
+			}
+		}
+	}
+}
+
+.box {
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+#main-content {
+	// margin: 2rem 10rem;
+	margin: 0 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-shrink: 0;
+
+	.rating {
+		margin: 0 1rem;
+		padding: 1rem;
+		i {
+			color: $main-color;
+		}
+		h1 {
+			font-size: 2.5rem;
+			color: $main-color;
+		}
+		#rate-review {
+			font-size: 0.8rem;
+		}
+	}
+
+	// Info Container
+	.info-container {
+		margin: 2rem 0;
+		padding: 1rem;
+		.about {
+			padding: 1rem;
+			p {
+				margin-top: 1rem;
+				margin-right: 3rem;
+			}
+		}
+		.what-get,
+		.what-learnt,
+		.say {
+			ul {
+				.down {
+					margin-right: 0.6rem;
+				}
+			}
+		}
+		.say {
+			margin-top: 2rem;
+		}
+
+		.opinion {
+			width: 90%;
+
+			.opinion-1 {
+				display: flex;
+				background-color: $secondary-color;
+				height: 300px;
+				width: 80%;
+				position: relative;
+				img {
+					align-self: center;
+					height: 200px;
+					width: 200px;
+					border-radius: 50%;
+					padding: 2rem;
+					object-fit: cover;
+				}
+
+				.text {
+					// align-self: center;
+					// padding: 1rem;
+					// line-height: 1.6;
+					// font-weight: normal;
+					// font-size: 1.3rem;
+					height: 200px;
+					width: 186px;
+					position: absolute;
+					top: 20%;
+					left: 55%;
+					overflow: hidden;
+				}
+			}
+		}
+		.end-line {
+			font-size: 3rem;
+			text-align: center;
+			margin: 7rem auto;
+		}
+	}
+
+	.subscribe-query {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		// max-width: 100%;
+		margin: 2rem auto;
+
+		.reward {
+			display: flex;
+			padding: 1rem;
+			align-items: center;
+			justify-content: center;
+
+			img:first-child {
+				margin-right: 1rem;
+			}
+		}
+
+		.subscribe {
+			@extend %box-arrow;
+			// margin-bottom: 10rem;
+			margin-top: 3rem;
+
+			h4 {
+				text-align: center;
+				padding: 1rem 0;
+				font-size: large;
+				font-weight: bolder;
+			}
+			.quantas-logo {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 1rem auto;
+				h5 {
+					padding: 0.5rem;
+				}
+			}
+
+			.plan {
+				padding: 1.5rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				&:last-child {
+					input {
+						visibility: hidden;
+					}
+				}
+				.radio {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					input {
+						margin-right: 0.5rem;
+					}
+				}
+
+				.price {
+					line-height: 1.4;
+					padding: 0.4rem;
+					display: flex;
+					align-items: center;
+					flex-shrink: 0;
+					// height: 64px;
+					// width: 70px;
+
+					p {
+						text-align: center;
+						font-size: 0.5rem;
+					}
+					h3 {
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						align-items: center;
+						font-size: 1.5rem;
+						width: 64px;
+						height: 64px;
+						&.price-3 {
+							font-size: 1rem;
+						}
+					}
+					&-1 {
+						background: $main-color;
+						color: $light-color;
+						border-radius: 50%;
+					}
+					&-2 {
+						background: $secondary-color;
+						color: $main-color;
+						border-radius: 50%;
+					}
+					&-3 {
+						background: $dark-color;
+						color: $secondary-color;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			p {
+				display: flex;
+				flex-direction: column;
+
+				&1 {
+					font-size: 1rem;
+					font-weight: bolder;
+				}
+				&2 {
+					font-size: 1rem;
+				}
+				&3 {
+					margin-top: 1rem;
+				}
+			}
+			h3 {
+				p {
+					font-size: 0.4rem;
+				}
+			}
+		}
+		.btn-cart {
+			width: 50%;
+			margin: 2rem auto;
+		}
+	}
+	.query {
+		@extend %box-arrow;
+		padding: 1rem;
+		margin-top: 10rem;
+		h3 {
+			text-align: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: space-between;
+			input {
+				margin: 0.5rem 0.2rem;
+				padding: 0.5rem;
+				border-radius: 5px;
+				border: transparent;
+				border: 1px solid $border-color;
+				&:focus {
+					outline-color: $main-color;
+				}
+			}
+			label {
+				margin-left: 1rem;
+				border-radius: 5px;
+			}
+			textarea {
+				height: 6rem;
+				width: 90%;
+				padding: 1rem;
+				margin: 1rem auto;
+				&:focus {
+					outline-color: $main-color;
+				}
+				::placeholder {
+					color: red;
+				}
+			}
+			.btn {
+				width: 90%;
+				margin: 1rem auto;
+			}
+		}
+	}
+}
+
+.faq {
+	height: fit-content;
+
+	margin-top: 7rem;
+	background-color: $faq-color;
+	.container {
+		padding: 0.5rem;
+		margin: 0 10rem;
+		width: 60%;
+		h2 {
+			color: $secondary-color;
+			font-size: 3rem;
+		}
+		.expand {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			color: $light-color;
+			padding: 1rem;
+			border-top: 1px solid #33154c;
+			&:last-child {
+				border-bottom: 1px solid #33154c;
+			}
+			a {
+				color: $secondary-color;
+				cursor: pointer;
+			}
+			p {
+				margin-top: 1rem;
+				font-size: 0.8rem;
+			}
+			&:last-child {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+}
+
+.photos {
+	margin-bottom: 2rem;
+	width: $website-width;
+
+	.container {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+
+		&::before {
+			content: '';
+			top: 0;
+			left: 0;
+			background: $main-color;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			opacity: 0.3;
+			z-index: 1;
+		}
+		.person {
+			height: 200px;
+			position: relative;
+
+			.image {
+				height: fit-content;
+
+				img {
+					height: 200px;
+					object-fit: cover;
+				}
+				.link {
+					height: 35px;
+					width: 35px;
+					background-color: $main-color;
+					position: absolute;
+					bottom: 10%;
+					left: 80%;
+					border-radius: 50%;
+
+					i {
+						color: $secondary-color;
+						cursor: pointer;
+						margin-left: 0.5rem;
+						margin-top: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+// Footer
+footer {
+	.social {
+		display: flex;
+		flex-wrap: wrap;
+		flex-shrink: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		img {
+			width: 100px;
+		}
+		p {
+			font-weight: bold;
+			padding: 1rem;
+			color: $main-color;
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			li {
+				margin-left: 1rem;
+				height: 30px;
+				width: 30px;
+				border-radius: 50%;
+				background-color: $main-color;
+
+				a {
+					i {
+						color: #fff;
+						padding: 0.3rem;
+						margin-left: 0.18rem;
+						margin-top: 0.1rem;
+						&:hover {
+							transition: transform 0.5s ease;
+							transform: rotate(-360deg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-items {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+
+		li {
+			padding: 0.5rem;
+			line-height: 1;
+			a {
+				color: #3f3f48;
+			}
+		}
+	}
+	.copyright {
+		margin-top: 5rem;
+		p {
+			font-size: 0.8rem;
+			&:first-child {
+				text-align: right;
+			}
+		}
+	}
+}
